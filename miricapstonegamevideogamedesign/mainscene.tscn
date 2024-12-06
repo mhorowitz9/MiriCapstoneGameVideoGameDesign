@@ -1043,7 +1043,7 @@ size = Vector2(196, 132)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1146.0
-offset_bottom = 648.0
+offset_bottom = 783.0
 color = Color(0, 0, 1, 1)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
