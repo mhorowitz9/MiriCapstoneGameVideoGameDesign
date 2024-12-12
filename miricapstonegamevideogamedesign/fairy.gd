@@ -1,24 +1,67 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -800.0  # Higher jump velocity for a higher jump
-const GRAVITY = 1500.0  # Increased gravity to make the character fall faster
+const JUMP_VELOCITY = -800.0
+const GRAVITY = 1500.0
 
+# Health variable
+var health = 3
+
+
+@onready var Heart1 = $CanvasLayer/Heart1
+@onready var Heart2 = $CanvasLayer/Heart2
+@onready var Heart3 = $CanvasLayer/Heart3
+
+
+func _ready():
+
+	add_to_group("fairy")
+
+	
+	if Heart1 == null or Heart2 == null or Heart3 == null:
+		print("Error: One or more heart nodes not found.")
+		return
+
+	# Update health UI based on initial health value
+	update_health_ui()
+
+# Called every frame
 func _physics_process(delta: float) -> void:
-	# Apply gravity manually to the velocity.y axis.
+	# Gravity and movement code
 	if not is_on_floor():
-		velocity.y += GRAVITY * delta  # Apply custom gravity
+		velocity.y += GRAVITY * delta
 
-	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY  # Apply higher jump velocity
+		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
+	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	move_and_slide()  # Move the character with automatic collision handling
+	move_and_slide()
+
+
+func take_damage():
+	health -= 1
+	print("Player hit! Current health: " + str(health))  # Debug print to check health
+	update_health_ui()  
+
+
+func update_health_ui():
+	if Heart1 == null or Heart2 == null or Heart3 == null:
+		print("Error: Heart nodes are not properly initialized.")
+		return
+
+	
+	Heart1.visible = health >= 1
+	Heart2.visible = health >= 2
+	Heart3.visible = health >= 3
+
+
+func _on_body_entered(body: Node) -> void:
+
+	if body.is_in_group("fairy"):  
+		print("Player touched the spiky candy cane!")
+		body.take_damage()  
