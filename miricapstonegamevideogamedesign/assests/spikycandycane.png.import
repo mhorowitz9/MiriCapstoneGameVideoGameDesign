@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhy158cq1tqn5"
-path="res://.godot/imported/fairy2.png-3a2f675e0e713c32c1c433ef44a8af31.ctex"
+uid="uid://d0wxcel6t027l"
+path="res://.godot/imported/spikycandycane.png-f1bea86397933926c9a6b4ab0246e50d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fairy2.png"
-dest_files=["res://.godot/imported/fairy2.png-3a2f675e0e713c32c1c433ef44a8af31.ctex"]
+source_file="res://assests/spikycandycane.png"
+dest_files=["res://.godot/imported/spikycandycane.png-f1bea86397933926c9a6b4ab0246e50d.ctex"]
 
 [params]
 

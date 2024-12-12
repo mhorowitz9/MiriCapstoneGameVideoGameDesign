@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://bdxq5b023xuvg"]
 
-[ext_resource type="Texture2D" uid="uid://c7xjdjmr03hsg" path="res://fairy1.png" id="1_drv4j"]
+[ext_resource type="Texture2D" uid="uid://c7xjdjmr03hsg" path="res://characterassets/fairy1.png" id="1_drv4j"]
 [ext_resource type="Script" path="res://fairy.gd" id="1_kjsqe"]
-[ext_resource type="Texture2D" uid="uid://bhy158cq1tqn5" path="res://fairy2.png" id="3_gb3t6"]
-[ext_resource type="Texture2D" uid="uid://cba2co8f0i54f" path="res://fairy3.png" id="4_g08lx"]
+[ext_resource type="Texture2D" uid="uid://bhy158cq1tqn5" path="res://characterassets/fairy2.png" id="3_gb3t6"]
+[ext_resource type="Texture2D" uid="uid://cba2co8f0i54f" path="res://characterassets/fairy3.png" id="4_g08lx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fobuk"]
 animations = [{

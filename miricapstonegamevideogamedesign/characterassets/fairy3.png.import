@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df15b7ovmap7v"
-path="res://.godot/imported/tilemaps1.jpeg-e4a2fb7b6039b8e19ad137407b770285.ctex"
+uid="uid://cba2co8f0i54f"
+path="res://.godot/imported/fairy3.png-e813f81722d1c3e831112330cec95ce1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilemaps1.jpeg"
-dest_files=["res://.godot/imported/tilemaps1.jpeg-e4a2fb7b6039b8e19ad137407b770285.ctex"]
+source_file="res://characterassets/fairy3.png"
+dest_files=["res://.godot/imported/fairy3.png-e813f81722d1c3e831112330cec95ce1.ctex"]
 
 [params]
 
