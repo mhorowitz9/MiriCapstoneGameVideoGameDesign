@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://ldslv224hcv2"]
+[gd_scene load_steps=11 format=4 uid="uid://ldslv224hcv2"]
 
 [ext_resource type="Texture2D" uid="uid://df15b7ovmap7v" path="res://assests/tilemaps1.jpeg" id="1_abn4t"]
 [ext_resource type="Texture2D" uid="uid://bnpusxtnr00e1" path="res://assests/heart.png" id="1_f5qi4"]
 [ext_resource type="PackedScene" uid="uid://bdxq5b023xuvg" path="res://fairy.tscn" id="2_a6jen"]
+[ext_resource type="PackedScene" uid="uid://dl6gsyy246q6d" path="res://Goodcandycane.tscn" id="3_67rqa"]
 [ext_resource type="PackedScene" uid="uid://bsj23u763wqka" path="res://Spikycandycane.tscn" id="5_qqwi1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vsn8"]
@@ -1064,10 +1065,10 @@ anchor_left = 0.756
 anchor_top = 0.065
 anchor_right = 0.756
 anchor_bottom = 0.065
-offset_left = -32.912
-offset_top = -11.12
-offset_right = 467.088
-offset_bottom = 53.88
+offset_left = -47.912
+offset_top = -16.12
+offset_right = 452.088
+offset_bottom = 73.88
 theme_override_font_sizes/font_size = 65
 text = "Score: 0"
 
@@ -1094,6 +1095,9 @@ offset_right = 240.0
 offset_bottom = 230.0
 texture = ExtResource("1_f5qi4")
 expand_mode = 1
+
+[node name="Goodcandycane" parent="fairy/CanvasLayer" instance=ExtResource("3_67rqa")]
+position = Vector2(651, 86)
 
 [node name="Spikycandycane" parent="." instance=ExtResource("5_qqwi1")]
 position = Vector2(-36, 106)
