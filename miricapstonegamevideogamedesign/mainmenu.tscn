@@ -21,9 +21,9 @@ script = ExtResource("1_mlthn")
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = -319.0
-offset_top = -132.0
-offset_right = 960.0
-offset_bottom = 596.0
+offset_top = -223.0
+offset_right = 1221.0
+offset_bottom = 1209.0
 color = Color(0.648967, 0.758903, 0.990207, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

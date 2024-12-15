@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://wallgame.gd" id="1_tsta0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1pnwc"]
-size = Vector2(53, 624)
+size = Vector2(53, 1379)
 
 [node name="WallGame" type="Node2D"]
 
@@ -11,7 +11,7 @@ size = Vector2(53, 624)
 script = ExtResource("1_tsta0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wallgame"]
-position = Vector2(159, 330)
+position = Vector2(159, 364.5)
 shape = SubResource("RectangleShape2D_1pnwc")
 debug_color = Color(0.91359, 8.72129e-05, 0.719226, 0.42)
 

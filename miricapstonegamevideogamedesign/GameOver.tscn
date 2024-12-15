@@ -15,9 +15,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -128.0
-offset_top = -328.0
+offset_top = -365.0
 offset_right = 1582.0
-offset_bottom = 726.0
+offset_bottom = 781.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
@@ -83,7 +83,7 @@ theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.924485, 4.25476e-05, 0.67414, 1)
 theme_override_fonts/font = ExtResource("2_yqlf8")
 theme_override_font_sizes/font_size = 45
-text = "Reedeem Yourself!"
+text = "Redeem Yourself!"
 
 [node name="Tutorial" type="Button" parent="Loseanimation/MarginContainer/VBoxContainer"]
 modulate = Color(1, 0.372388, 0.504611, 1)
