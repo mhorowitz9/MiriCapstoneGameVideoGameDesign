@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://waet7svp16rt"]
+[gd_scene load_steps=5 format=3 uid="uid://waet7svp16rt"]
 
 [ext_resource type="Script" path="res://mainmenu.gd" id="1_mlthn"]
+[ext_resource type="FontFile" uid="uid://dadah37u478b1" path="res://Griffy-Regular.ttf" id="2_1bkax"]
+[ext_resource type="FontFile" uid="uid://bobg3qg8orbv6" path="res://DynaPuff-VariableFont_wdth,wght.ttf" id="3_jp20k"]
+[ext_resource type="PackedScene" uid="uid://cnnivgnj6wu1w" path="res://winanimation.tscn" id="4_pud1o"]
 
 [node name="Mainmenu" type="Control"]
 layout_mode = 3
@@ -15,29 +18,71 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mlthn")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -319.0
+offset_top = -132.0
+offset_right = 960.0
+offset_bottom = 596.0
+color = Color(0.648967, 0.758903, 0.990207, 1)
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 376.0
-offset_bottom = 375.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -250.5
+offset_right = 288.0
+offset_bottom = 250.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.96366, 0, 0.488862, 1)
+theme_override_fonts/font = ExtResource("2_1bkax")
+theme_override_font_sizes/font_size = 75
 text = "Sugar Fairy Quest"
 
 [node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.372388, 0.504611, 1)
 layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.999539, 0, 0.0501804, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.924485, 4.25476e-05, 0.67414, 1)
+theme_override_fonts/font = ExtResource("3_jp20k")
+theme_override_font_sizes/font_size = 45
 text = "Begin Your Quest"
 
 [node name="Tutorial" type="Button" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.372388, 0.504611, 1)
 layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.776074, 0, 0.249838, 1)
+theme_override_colors/font_hover_color = Color(0.776074, 0, 0.249838, 1)
+theme_override_colors/font_outline_color = Color(0.92549, 0, 0.67451, 1)
+theme_override_fonts/font = ExtResource("3_jp20k")
+theme_override_font_sizes/font_size = 45
 text = "Tutorial"
 
 [node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.372388, 0.504611, 1)
 layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.776074, 0, 0.249838, 1)
+theme_override_colors/font_hover_color = Color(0.776074, 0, 0.249838, 1)
+theme_override_colors/font_outline_color = Color(0.92549, 0, 0.67451, 1)
+theme_override_fonts/font = ExtResource("3_jp20k")
+theme_override_font_sizes/font_size = 45
 text = "Exit"
+
+[node name="Winanimation" parent="." instance=ExtResource("4_pud1o")]
+position = Vector2(-319, -60)
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
