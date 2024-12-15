@@ -1,8 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://ldslv224hcv2"]
+[gd_scene load_steps=13 format=4 uid="uid://ldslv224hcv2"]
 
 [ext_resource type="Texture2D" uid="uid://df15b7ovmap7v" path="res://assests/tilemaps1.jpeg" id="1_abn4t"]
 [ext_resource type="Texture2D" uid="uid://bnpusxtnr00e1" path="res://assests/heart.png" id="1_f5qi4"]
+[ext_resource type="Texture2D" uid="uid://7t8b6wnwnl4o" path="res://sky.png" id="1_ucyb0"]
 [ext_resource type="PackedScene" uid="uid://bdxq5b023xuvg" path="res://fairy.tscn" id="2_a6jen"]
+[ext_resource type="Texture2D" uid="uid://blqh8cg8eh6rv" path="res://clouds.png" id="2_wpmuo"]
+[ext_resource type="PackedScene" uid="uid://dl6gsyy246q6d" path="res://Goodcandycane.tscn" id="3_67rqa"]
 [ext_resource type="PackedScene" uid="uid://bsj23u763wqka" path="res://Spikycandycane.tscn" id="5_qqwi1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vsn8"]
@@ -1046,7 +1049,28 @@ size = Vector2(191, 127.219)
 
 [node name="Node2D" type="Node2D"]
 
+[node name="sky" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="sky"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sky" type="Sprite2D" parent="sky/ParallaxLayer"]
+position = Vector2(1538, 2383.75)
+scale = Vector2(1, 1.23248)
+texture = ExtResource("1_ucyb0")
+
+[node name="clouds" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="clouds"]
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="Clouds" type="Sprite2D" parent="clouds"]
+position = Vector2(830.5, 795.5)
+scale = Vector2(0.357312, 0.380212)
+texture = ExtResource("2_wpmuo")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -3.0
 offset_top = -55.0
 offset_right = 1217.0
@@ -1055,6 +1079,9 @@ color = Color(0, 0, 1, 1)
 
 [node name="fairy" parent="." instance=ExtResource("2_a6jen")]
 position = Vector2(-207, 254)
+
+[node name="Camera2D" type="Camera2D" parent="fairy"]
+position = Vector2(679, 72)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="fairy"]
 
@@ -1103,7 +1130,7 @@ texture = ExtResource("1_f5qi4")
 expand_mode = 1
 
 [node name="Spikycandycane" parent="." instance=ExtResource("5_qqwi1")]
-position = Vector2(-36, 106)
+position = Vector2(-46, 136)
 
 [node name="walls" type="StaticBody2D" parent="."]
 position = Vector2(573, 627)
@@ -1143,3 +1170,21 @@ shape = SubResource("RectangleShape2D_rpi7r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tilemap platfroms"]
 position = Vector2(-255, -179.609)
 shape = SubResource("RectangleShape2D_rpi7r")
+
+[node name="Goodcandycane" parent="." instance=ExtResource("3_67rqa")]
+position = Vector2(64, 311)
+
+[node name="Goodcandycane2" parent="." instance=ExtResource("3_67rqa")]
+position = Vector2(426, 328)
+
+[node name="Goodcandycane3" parent="." instance=ExtResource("3_67rqa")]
+position = Vector2(722, 74)
+
+[node name="Goodcandycane4" parent="." instance=ExtResource("3_67rqa")]
+position = Vector2(1011, -63)
+
+[node name="Spikycandycane2" parent="." instance=ExtResource("5_qqwi1")]
+position = Vector2(98, 134)
+
+[node name="Spikycandycane3" parent="." instance=ExtResource("5_qqwi1")]
+position = Vector2(34, 134)

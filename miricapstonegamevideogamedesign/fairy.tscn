@@ -183,10 +183,11 @@ size = Vector2(214.475, 1040.63)
 script = ExtResource("1_kjsqe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(299.547, 179)
 scale = Vector2(0.187943, 0.173828)
 sprite_frames = SubResource("SpriteFrames_m20kk")
-animation = &"idle"
+animation = &"flyingright"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(291, 160.625)
