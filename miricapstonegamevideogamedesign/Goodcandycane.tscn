@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl6gsyy246q6d"]
+
+[ext_resource type="Script" path="res://goodcandycane.gd" id="1_5pxs6"]
+[ext_resource type="Texture2D" uid="uid://cscxucyo8wlxn" path="res://assests/goodcandycane.png" id="1_sq1k4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ax1yi"]
+size = Vector2(53, 68.5)
+
+[node name="Goodcandycane" type="Node2D"]
+
+[node name="goodcandycane" type="Area2D" parent="."]
+script = ExtResource("1_5pxs6")
+
+[node name="Sprite2D" type="Sprite2D" parent="goodcandycane"]
+position = Vector2(102.25, 136.5)
+scale = Vector2(0.0554199, 0.0473633)
+texture = ExtResource("1_sq1k4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goodcandycane"]
+position = Vector2(103, 132.25)
+shape = SubResource("RectangleShape2D_ax1yi")

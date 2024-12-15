@@ -8,19 +8,20 @@ size = Vector2(45.0001, 82.9999)
 
 [node name="Spikycandycane" type="Node2D"]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="spikycandycane" type="Area2D" parent="."]
 position = Vector2(336, 231)
 scale = Vector2(0.0996094, 0.0993652)
 script = ExtResource("2_5cvw3")
 
-[node name="Spikycandycane" type="Sprite2D" parent="Area2D"]
+[node name="Spikycandycane" type="Sprite2D" parent="spikycandycane"]
 position = Vector2(-110.431, -332.108)
 scale = Vector2(0.568627, 0.554054)
 texture = ExtResource("1_u60n7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikycandycane"]
 position = Vector2(-125.49, -417.651)
 scale = Vector2(10.0392, 10.0639)
 shape = SubResource("RectangleShape2D_rs54n")
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="spikycandycane" to="spikycandycane" method="_on_body_entered"]
+[connection signal="player_collided" from="spikycandycane" to="spikycandycane" method="_on_player_collided"]
