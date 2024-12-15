@@ -1,0 +1,77 @@
+[gd_scene load_steps=15 format=3 uid="uid://cnnivgnj6wu1w"]
+
+[ext_resource type="Texture2D" uid="uid://dp2ktfysbkyvr" path="res://win/win2.png" id="1_3at5r"]
+[ext_resource type="Texture2D" uid="uid://cw218k63ld8ag" path="res://win/win3.png" id="2_1hciw"]
+[ext_resource type="Texture2D" uid="uid://c5kflitanjffc" path="res://win/win4.png" id="3_4b7ic"]
+[ext_resource type="Texture2D" uid="uid://b1vxhuskx8u0i" path="res://win/win5.png" id="4_357x8"]
+[ext_resource type="Texture2D" uid="uid://cqw1t80l13vu1" path="res://win/win6.png" id="5_qhfac"]
+[ext_resource type="Texture2D" uid="uid://dtp5x1x4fujvs" path="res://win/win7.png" id="6_2wf3c"]
+[ext_resource type="Texture2D" uid="uid://bq35yvixycmrc" path="res://win/win8.png" id="7_5va3p"]
+[ext_resource type="Texture2D" uid="uid://bfr30koej52yx" path="res://win/win10.png" id="8_82ebn"]
+[ext_resource type="Texture2D" uid="uid://dx4vlodi126d1" path="res://win/win9.png" id="9_kl7lr"]
+[ext_resource type="Texture2D" uid="uid://b27demb1wpev8" path="res://win/win11.png" id="10_hlucr"]
+[ext_resource type="Texture2D" uid="uid://cnl0g4wfp0vrn" path="res://win/win12.png" id="11_bh8rd"]
+[ext_resource type="Texture2D" uid="uid://cq5li8du08v4x" path="res://win/win13.png" id="12_iyvjo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nm6hl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3at5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1hciw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4b7ic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_357x8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qhfac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2wf3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5va3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_82ebn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kl7lr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hlucr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bh8rd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_iyvjo")
+}],
+"loop": true,
+"name": &"win",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fbo8"]
+size = Vector2(290, 235)
+
+[node name="Winanimation" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(311, 309)
+scale = Vector2(0.223145, 0.254272)
+sprite_frames = SubResource("SpriteFrames_nm6hl")
+animation = &"win"
+autoplay = "win"
+frame_progress = 0.754886
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(312, 193)
+shape = SubResource("RectangleShape2D_0fbo8")
