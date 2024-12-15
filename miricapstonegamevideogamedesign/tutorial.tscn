@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtsic7xrksyil"]
+[gd_scene load_steps=7 format=3 uid="uid://dtsic7xrksyil"]
 
 [ext_resource type="FontFile" uid="uid://dadah37u478b1" path="res://Griffy-Regular.ttf" id="1_n5wgb"]
 [ext_resource type="Script" path="res://tutorial.gd" id="1_udope"]
 [ext_resource type="FontFile" uid="uid://bobg3qg8orbv6" path="res://DynaPuff-VariableFont_wdth,wght.ttf" id="2_jedre"]
 [ext_resource type="Texture2D" uid="uid://d0wxcel6t027l" path="res://assests/spikycandycane.png" id="4_kqojt"]
 [ext_resource type="Texture2D" uid="uid://cscxucyo8wlxn" path="res://assests/goodcandycane.png" id="5_wt47h"]
+[ext_resource type="Texture2D" uid="uid://s07lrx2v5nnp" path="res://assests/pinkcandy.png" id="6_avw30"]
 
 [node name="Tutorial" type="Control"]
 layout_mode = 3
@@ -17,10 +18,10 @@ script = ExtResource("1_udope")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = -42.0
-offset_top = -100.0
-offset_right = 1721.0
-offset_bottom = 1132.0
+offset_left = -48.0
+offset_top = -114.0
+offset_right = 1715.0
+offset_bottom = 1118.0
 color = Color(0.868848, 0.592044, 0.826319, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -85,9 +86,9 @@ text = "Exit"
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0190972
-anchor_top = 0.109568
+anchor_top = 0.0740741
 anchor_right = 2.40799
-anchor_bottom = 0.802469
+anchor_bottom = 0.766975
 theme_override_fonts/font = ExtResource("2_jedre")
 theme_override_font_sizes/font_size = 30
 text = "Welcome, Sugar Fairy! 
@@ -99,18 +100,24 @@ Mission:
 Earn your Master Wings and save the Candy Kingdom from eternal winter.
 
 - Collect Sweet Candy Canes to fuel your journey 
-- Avoid Frozen Candy Canes—they'll take one of your 3 lives "
+- Avoid Frozen Candy Canes—they'll take one of your 3 lives 
+- Win by collecting the Sugar Wrap! "
 metadata/_edit_use_anchors_ = true
 
 [node name="Spikycandycane" type="Sprite2D" parent="."]
-position = Vector2(953, 455)
-scale = Vector2(0.0634766, 0.0649414)
+position = Vector2(947, 407)
+scale = Vector2(0.0512695, 0.0471191)
 texture = ExtResource("4_kqojt")
 
 [node name="Goodcandycane" type="Sprite2D" parent="."]
-position = Vector2(783, 402)
-scale = Vector2(0.074707, 0.0634765)
+position = Vector2(785, 369)
+scale = Vector2(0.0563965, 0.0541992)
 texture = ExtResource("5_wt47h")
+
+[node name="Pinkcandy" type="Sprite2D" parent="."]
+position = Vector2(588, 513)
+scale = Vector2(0.125977, 0.145264)
+texture = ExtResource("6_avw30")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

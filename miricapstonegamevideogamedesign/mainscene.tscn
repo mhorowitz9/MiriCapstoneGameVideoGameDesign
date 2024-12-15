@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://ldslv224hcv2"]
+[gd_scene load_steps=16 format=4 uid="uid://ldslv224hcv2"]
 
 [ext_resource type="Texture2D" uid="uid://df15b7ovmap7v" path="res://assests/tilemaps1.jpeg" id="1_abn4t"]
 [ext_resource type="Texture2D" uid="uid://bnpusxtnr00e1" path="res://assests/heart.png" id="1_f5qi4"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://blqh8cg8eh6rv" path="res://clouds.png" id="2_wpmuo"]
 [ext_resource type="PackedScene" uid="uid://dl6gsyy246q6d" path="res://Goodcandycane.tscn" id="3_67rqa"]
 [ext_resource type="PackedScene" uid="uid://bsj23u763wqka" path="res://Spikycandycane.tscn" id="5_qqwi1"]
+[ext_resource type="Texture2D" uid="uid://s07lrx2v5nnp" path="res://assests/pinkcandy.png" id="7_ujlix"]
 [ext_resource type="PackedScene" uid="uid://bhga8ccy1lbms" path="res://WallGame.tscn" id="8_qjajn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ilko"]
@@ -1049,7 +1050,7 @@ sources/0 = SubResource("TileSetAtlasSource_fac3d")
 size = Vector2(184, 127)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpi7r"]
-size = Vector2(206.75, 127.219)
+size = Vector2(192.539, 115.805)
 
 [node name="Node2D" type="Node2D"]
 
@@ -1211,11 +1212,11 @@ position = Vector2(2365, -78)
 shape = SubResource("RectangleShape2D_rpi7r")
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="tilemap platfroms"]
-position = Vector2(1902, -107)
+position = Vector2(1895.73, -107)
 shape = SubResource("RectangleShape2D_rpi7r")
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="tilemap platfroms"]
-position = Vector2(2111, -234)
+position = Vector2(2098, -242)
 shape = SubResource("RectangleShape2D_rpi7r")
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="tilemap platfroms"]
@@ -1223,7 +1224,7 @@ position = Vector2(2336, -82)
 shape = SubResource("RectangleShape2D_rpi7r")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="tilemap platfroms"]
-position = Vector2(936, -60)
+position = Vector2(952, -61)
 shape = SubResource("RectangleShape2D_rpi7r")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="tilemap platfroms"]
@@ -1239,7 +1240,7 @@ position = Vector2(690, -229)
 shape = SubResource("RectangleShape2D_rpi7r")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="tilemap platfroms"]
-position = Vector2(179, -257)
+position = Vector2(182.688, -256.098)
 shape = SubResource("RectangleShape2D_rpi7r")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="tilemap platfroms"]
@@ -1247,7 +1248,7 @@ position = Vector2(1306, 54)
 shape = SubResource("RectangleShape2D_rpi7r")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="tilemap platfroms"]
-position = Vector2(236, -258)
+position = Vector2(236, -253.195)
 shape = SubResource("RectangleShape2D_rpi7r")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="tilemap platfroms"]
@@ -1267,8 +1268,13 @@ position = Vector2(-51.75, -48)
 shape = SubResource("RectangleShape2D_rpi7r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tilemap platfroms"]
-position = Vector2(-255, -179.609)
+position = Vector2(-252.156, -179.609)
 shape = SubResource("RectangleShape2D_rpi7r")
+
+[node name="Pinkcandy" type="Sprite2D" parent="tilemap platfroms"]
+position = Vector2(2753.31, -85)
+scale = Vector2(0.069641, 0.0996094)
+texture = ExtResource("7_ujlix")
 
 [node name="Goodcandycane" parent="." instance=ExtResource("3_67rqa")]
 position = Vector2(64, 311)
