@@ -1084,7 +1084,7 @@ color = Color(0, 0, 1, 1)
 position = Vector2(-207, 254)
 
 [node name="Camera2D" type="Camera2D" parent="fairy"]
-position = Vector2(679, 162)
+position = Vector2(763, 122)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="fairy"]
 
@@ -1133,7 +1133,7 @@ texture = ExtResource("1_f5qi4")
 expand_mode = 1
 
 [node name="Spikycandycane" parent="." instance=ExtResource("5_qqwi1")]
-position = Vector2(-46, 136)
+position = Vector2(-27, 157)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1296, 664)
@@ -1159,6 +1159,7 @@ shape = SubResource("RectangleShape2D_7vsn8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="walls"]
 position = Vector2(2773, -212)
 shape = SubResource("RectangleShape2D_7vsn8")
+debug_color = Color(0.909554, 0.000108005, 0.732989, 0.42)
 
 [node name="tilemap platfroms" type="StaticBody2D" parent="."]
 position = Vector2(573, 627)
@@ -1272,7 +1273,7 @@ shape = SubResource("RectangleShape2D_rpi7r")
 position = Vector2(64, 311)
 
 [node name="Goodcandycane2" parent="." instance=ExtResource("3_67rqa")]
-position = Vector2(426, 328)
+position = Vector2(435, 350)
 
 [node name="Goodcandycane3" parent="." instance=ExtResource("3_67rqa")]
 position = Vector2(722, 74)
@@ -1281,7 +1282,55 @@ position = Vector2(722, 74)
 position = Vector2(1011, -63)
 
 [node name="Spikycandycane2" parent="." instance=ExtResource("5_qqwi1")]
-position = Vector2(98, 134)
+position = Vector2(359, 78)
 
 [node name="Spikycandycane3" parent="." instance=ExtResource("5_qqwi1")]
-position = Vector2(34, 134)
+position = Vector2(138, 279)
+
+[node name="Spikycandycane4" parent="." instance=ExtResource("5_qqwi1")]
+position = Vector2(646, 285)
+
+[node name="Spikycandycane5" parent="." instance=ExtResource("5_qqwi1")]
+position = Vector2(703, -61)
+
+[node name="Spikycandycane6" parent="." instance=ExtResource("5_qqwi1")]
+position = Vector2(1139, 262)
+
+[node name="Spikycandycane7" parent="." instance=ExtResource("5_qqwi1")]
+position = Vector2(1457, 375)
+
+[node name="Spikycandycane8" parent="." instance=ExtResource("5_qqwi1")]
+position = Vector2(1614, 191)
+
+[node name="Spikycandycane9" parent="." instance=ExtResource("5_qqwi1")]
+position = Vector2(1902, 371)
+
+[node name="Spikycandycane10" parent="." instance=ExtResource("5_qqwi1")]
+position = Vector2(2077, 242)
+
+[node name="Spikycandycane11" parent="." instance=ExtResource("5_qqwi1")]
+position = Vector2(2896, 411)
+
+[node name="Spikycandycane12" parent="." instance=ExtResource("5_qqwi1")]
+position = Vector2(2543, 260)
+
+[node name="Spikycandycane13" parent="." instance=ExtResource("5_qqwi1")]
+position = Vector2(2349, 104)
+
+[node name="Goodcandycane5" parent="." instance=ExtResource("3_67rqa")]
+position = Vector2(2877, 325)
+
+[node name="Goodcandycane6" parent="." instance=ExtResource("3_67rqa")]
+position = Vector2(1472, 350)
+
+[node name="Goodcandycane7" parent="." instance=ExtResource("3_67rqa")]
+position = Vector2(2036, 425)
+
+[node name="Goodcandycane8" parent="." instance=ExtResource("3_67rqa")]
+position = Vector2(967, 349)
+
+[node name="Goodcandycane9" parent="." instance=ExtResource("3_67rqa")]
+position = Vector2(1178, 185)
+
+[node name="Goodcandycane10" parent="." instance=ExtResource("3_67rqa")]
+position = Vector2(835, -105)
