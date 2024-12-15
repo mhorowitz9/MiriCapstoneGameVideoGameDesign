@@ -1,18 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://nne6c0bc2qew"]
+[gd_scene load_steps=8 format=3 uid="uid://nne6c0bc2qew"]
 
 [ext_resource type="Texture2D" uid="uid://ci3v8rlpk8oct" path="res://winbackground/winsky.png" id="1_254dl"]
+[ext_resource type="Script" path="res://winscene.gd" id="1_c74cp"]
 [ext_resource type="PackedScene" uid="uid://cnnivgnj6wu1w" path="res://winanimation.tscn" id="1_ol3t5"]
 [ext_resource type="Texture2D" uid="uid://crty2c048p08r" path="res://winbackground/wincastle.png" id="2_sh8wa"]
 [ext_resource type="Texture2D" uid="uid://oygcrsve1woi" path="res://winbackground/winclouds.png" id="3_u4k0j"]
+[ext_resource type="FontFile" uid="uid://bobg3qg8orbv6" path="res://DynaPuff-VariableFont_wdth,wght.ttf" id="4_5jmgy"]
+[ext_resource type="FontFile" uid="uid://dadah37u478b1" path="res://Griffy-Regular.ttf" id="6_a4eue"]
 
 [node name="Winscene" type="Node2D"]
+script = ExtResource("1_c74cp")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -126.0
+offset_right = 1240.0
+offset_bottom = 861.0
+color = Color(0.853995, 0.866062, 1, 1)
 
 [node name="Winsky" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(570, 1248.12)
-scale = Vector2(0.266062, 0.598096)
+scale = Vector2(0.29584, 0.599438)
 texture = ExtResource("1_254dl")
 
 [node name="Wincastle" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.580392)
 position = Vector2(879, 341.5)
 scale = Vector2(0.16082, 0.138156)
 texture = ExtResource("2_sh8wa")
@@ -23,20 +35,85 @@ scale = Vector2(0.269216, 0.334122)
 texture = ExtResource("3_u4k0j")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 192.0
-offset_right = 990.0
-offset_bottom = 129.0
+offset_left = -4.0
+offset_top = 67.0
+offset_right = 734.0
+offset_bottom = 196.0
+scale = Vector2(1.09626, 1.08736)
 color = Color(1, 1, 1, 0.768627)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 230.0
-offset_top = 39.0
-offset_right = 964.0
-offset_bottom = 243.0
+offset_left = 35.0
+offset_top = 157.0
+offset_right = 797.0
+offset_bottom = 361.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_5jmgy")
 theme_override_font_sizes/font_size = 30
-text = "Congratulations! You win!
-You have saved your kingdom from eternal winter!"
+text = "You have saved your kingdom from eternal winter!"
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 23.0
+offset_top = 64.0
+offset_right = 522.0
+offset_bottom = 167.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.96366, 0, 0.488862, 1)
+theme_override_fonts/font = ExtResource("6_a4eue")
+theme_override_font_sizes/font_size = 75
+text = "Congratulations!"
 
 [node name="Winanimation" parent="." instance=ExtResource("1_ol3t5")]
-position = Vector2(66, 66)
+position = Vector2(578, 193)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = 236.0
+offset_right = 577.0
+offset_bottom = 737.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 0.505882, 1)
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.999539, 0, 0.0501804, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.924485, 4.25476e-05, 0.67414, 1)
+theme_override_fonts/font = ExtResource("4_5jmgy")
+theme_override_font_sizes/font_size = 45
+text = "Relive Your Glory"
+
+[node name="Tutorial" type="Button" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 0.505882, 1)
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.776074, 0, 0.249838, 1)
+theme_override_colors/font_hover_color = Color(0.776074, 0, 0.249838, 1)
+theme_override_colors/font_outline_color = Color(0.92549, 0, 0.67451, 1)
+theme_override_fonts/font = ExtResource("4_5jmgy")
+theme_override_font_sizes/font_size = 45
+text = "Tutorial"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 0.505882, 1)
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.776074, 0, 0.249838, 1)
+theme_override_colors/font_hover_color = Color(0.776074, 0, 0.249838, 1)
+theme_override_colors/font_outline_color = Color(0.92549, 0, 0.67451, 1)
+theme_override_fonts/font = ExtResource("4_5jmgy")
+theme_override_font_sizes/font_size = 45
+text = "Exit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

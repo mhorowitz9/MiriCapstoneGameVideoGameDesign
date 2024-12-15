@@ -1,21 +1,104 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsb0gpt3uh6hx"]
+[gd_scene load_steps=4 format=3 uid="uid://bsb0gpt3uh6hx"]
 
 [ext_resource type="PackedScene" uid="uid://d13fmogvp6y1c" path="res://loseanimation.tscn" id="1_gtlc2"]
+[ext_resource type="FontFile" uid="uid://dadah37u478b1" path="res://Griffy-Regular.ttf" id="1_us7wf"]
+[ext_resource type="FontFile" uid="uid://bobg3qg8orbv6" path="res://DynaPuff-VariableFont_wdth,wght.ttf" id="2_yqlf8"]
 
 [node name="GameOver" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1710.0
-offset_bottom = 1054.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -328.0
+offset_right = 1582.0
+offset_bottom = 726.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
 color = Color(0.239216, 0, 0.654902, 1)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 362.0
-offset_top = 17.0
-offset_right = 1182.0
-offset_bottom = 184.0
+offset_left = 319.0
+offset_top = 27.0
+offset_right = 1139.0
+offset_bottom = 194.0
+theme_override_fonts/font = ExtResource("1_us7wf")
 theme_override_font_sizes/font_size = 64
 text = "Game Over!"
 
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 326.0
+offset_top = 124.0
+offset_right = 1008.0
+offset_bottom = 167.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_yqlf8")
+theme_override_font_sizes/font_size = 35
+text = "You have a chance to redeem yourself!"
+
 [node name="Loseanimation" parent="." instance=ExtResource("1_gtlc2")]
-position = Vector2(6, 33)
+position = Vector2(-179, -71)
+
+[node name="MarginContainer" type="MarginContainer" parent="Loseanimation"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 587.0
+offset_top = 332.0
+offset_right = 1163.0
+offset_bottom = 1117.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Loseanimation/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Loseanimation/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.96366, 0, 0.488862, 1)
+theme_override_fonts/font = ExtResource("1_us7wf")
+theme_override_font_sizes/font_size = 75
+text = "Sugar Fairy Quest"
+
+[node name="Start" type="Button" parent="Loseanimation/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.372388, 0.504611, 1)
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.999539, 0, 0.0501804, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.924485, 4.25476e-05, 0.67414, 1)
+theme_override_fonts/font = ExtResource("2_yqlf8")
+theme_override_font_sizes/font_size = 45
+text = "Reedeem Yourself!"
+
+[node name="Tutorial" type="Button" parent="Loseanimation/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.372388, 0.504611, 1)
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.776074, 0, 0.249838, 1)
+theme_override_colors/font_hover_color = Color(0.776074, 0, 0.249838, 1)
+theme_override_colors/font_outline_color = Color(0.92549, 0, 0.67451, 1)
+theme_override_fonts/font = ExtResource("2_yqlf8")
+theme_override_font_sizes/font_size = 45
+text = "Tutorial"
+
+[node name="Exit" type="Button" parent="Loseanimation/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.372388, 0.504611, 1)
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.776074, 0, 0.249838, 1)
+theme_override_colors/font_hover_color = Color(0.776074, 0, 0.249838, 1)
+theme_override_colors/font_outline_color = Color(0.92549, 0, 0.67451, 1)
+theme_override_fonts/font = ExtResource("2_yqlf8")
+theme_override_font_sizes/font_size = 45
+text = "Exit"

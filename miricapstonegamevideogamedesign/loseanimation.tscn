@@ -40,8 +40,8 @@ animations = [{
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(493, 465)
-scale = Vector2(0.46875, 0.40686)
+position = Vector2(413, 525.312)
+scale = Vector2(0.390625, 0.347961)
 sprite_frames = SubResource("SpriteFrames_we5qc")
 autoplay = "default"
 frame_progress = 0.441445
