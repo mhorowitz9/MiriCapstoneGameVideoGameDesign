@@ -119,3 +119,15 @@ func take_damage():
 		die()  # Call die() to handle Game Over
 	else:
 		play_animation("lose")  # Play "hurt" animation when the player takes damage
+
+# **Added Win Condition:**
+# Function to detect collision with "wallgame" (win condition)
+func _on_WallGame_body_entered(body: Node) -> void:
+	if body.is_in_group("fairy"):  # Check if the player collided with the wallgame
+		win_game()  # Trigger win condition
+
+# Function to handle the win event
+func win_game():
+	print("Player has won the game!")
+	# You can add any win logic here (e.g., transition to a win screen)
+	get_tree().change_scene_to_file("res://WinScene.tscn")  # Change to a "win" scene

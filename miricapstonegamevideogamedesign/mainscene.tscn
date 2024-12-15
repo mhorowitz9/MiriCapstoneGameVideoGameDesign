@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://ldslv224hcv2"]
+[gd_scene load_steps=15 format=4 uid="uid://ldslv224hcv2"]
 
 [ext_resource type="Texture2D" uid="uid://df15b7ovmap7v" path="res://assests/tilemaps1.jpeg" id="1_abn4t"]
 [ext_resource type="Texture2D" uid="uid://bnpusxtnr00e1" path="res://assests/heart.png" id="1_f5qi4"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://blqh8cg8eh6rv" path="res://clouds.png" id="2_wpmuo"]
 [ext_resource type="PackedScene" uid="uid://dl6gsyy246q6d" path="res://Goodcandycane.tscn" id="3_67rqa"]
 [ext_resource type="PackedScene" uid="uid://bsj23u763wqka" path="res://Spikycandycane.tscn" id="5_qqwi1"]
+[ext_resource type="PackedScene" uid="uid://bhga8ccy1lbms" path="res://WallGame.tscn" id="8_qjajn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ilko"]
 size = Vector2(3361.25, 24)
@@ -1133,7 +1134,7 @@ texture = ExtResource("1_f5qi4")
 expand_mode = 1
 
 [node name="Spikycandycane" parent="." instance=ExtResource("5_qqwi1")]
-position = Vector2(-27, 157)
+position = Vector2(-17, 162)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1296, 664)
@@ -1273,7 +1274,7 @@ shape = SubResource("RectangleShape2D_rpi7r")
 position = Vector2(64, 311)
 
 [node name="Goodcandycane2" parent="." instance=ExtResource("3_67rqa")]
-position = Vector2(435, 350)
+position = Vector2(530, 348)
 
 [node name="Goodcandycane3" parent="." instance=ExtResource("3_67rqa")]
 position = Vector2(722, 74)
@@ -1282,16 +1283,16 @@ position = Vector2(722, 74)
 position = Vector2(1011, -63)
 
 [node name="Spikycandycane2" parent="." instance=ExtResource("5_qqwi1")]
-position = Vector2(359, 78)
+position = Vector2(408, 81)
 
 [node name="Spikycandycane3" parent="." instance=ExtResource("5_qqwi1")]
-position = Vector2(138, 279)
+position = Vector2(176, 291)
 
 [node name="Spikycandycane4" parent="." instance=ExtResource("5_qqwi1")]
 position = Vector2(646, 285)
 
 [node name="Spikycandycane5" parent="." instance=ExtResource("5_qqwi1")]
-position = Vector2(703, -61)
+position = Vector2(793, -56)
 
 [node name="Spikycandycane6" parent="." instance=ExtResource("5_qqwi1")]
 position = Vector2(1139, 262)
@@ -1334,3 +1335,6 @@ position = Vector2(1178, 185)
 
 [node name="Goodcandycane10" parent="." instance=ExtResource("3_67rqa")]
 position = Vector2(835, -105)
+
+[node name="WallGame" parent="." instance=ExtResource("8_qjajn")]
+position = Vector2(3178, 154)

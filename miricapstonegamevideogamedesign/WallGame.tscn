@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhga8ccy1lbms"]
+
+[ext_resource type="Script" path="res://wallgame.gd" id="1_tsta0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pnwc"]
+size = Vector2(53, 624)
+
+[node name="WallGame" type="Node2D"]
+
+[node name="wallgame" type="Area2D" parent="."]
+script = ExtResource("1_tsta0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallgame"]
+position = Vector2(159, 330)
+shape = SubResource("RectangleShape2D_1pnwc")
+debug_color = Color(0.91359, 8.72129e-05, 0.719226, 0.42)
+
+[connection signal="body_entered" from="wallgame" to="wallgame" method="_on_body_entered"]
