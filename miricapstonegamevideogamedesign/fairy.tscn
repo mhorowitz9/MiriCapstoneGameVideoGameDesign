@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bdxq5b023xuvg"]
+[gd_scene load_steps=38 format=3 uid="uid://bdxq5b023xuvg"]
 
 [ext_resource type="Script" path="res://fairy.gd" id="1_kjsqe"]
 [ext_resource type="Texture2D" uid="uid://c1f2hekqpf68l" path="res://Fairyassests/flyingleft/flyingleft2.png" id="2_oc71c"]
@@ -19,11 +19,17 @@
 [ext_resource type="Texture2D" uid="uid://bermf52kfudsv" path="res://Fairyassests/jumping/jumping2.png" id="17_3mqa3"]
 [ext_resource type="Texture2D" uid="uid://c5rrb1g8pevik" path="res://Fairyassests/jumping/jumping3.png" id="18_yyk11"]
 [ext_resource type="Texture2D" uid="uid://ds0qe5is85rw2" path="res://Fairyassests/jumping/jumping4.png" id="19_1is2n"]
+[ext_resource type="Texture2D" uid="uid://b3e3nd42h40kt" path="res://Fairyassests/lose/lose3.png" id="20_1705j"]
 [ext_resource type="Texture2D" uid="uid://bgelur2oxsgu0" path="res://Fairyassests/walkingleft/walkingleft1.png" id="20_xma7b"]
+[ext_resource type="Texture2D" uid="uid://o0nrqvugheiq" path="res://Fairyassests/lose/lose5.png" id="21_cdlh8"]
 [ext_resource type="Texture2D" uid="uid://qjjyea6ajue" path="res://Fairyassests/walkingleft/walkingleft3.png" id="21_xodpi"]
 [ext_resource type="Texture2D" uid="uid://bxj2idy5224lb" path="res://Fairyassests/walkingleft/walkingleft2.png" id="22_nl1yt"]
+[ext_resource type="Texture2D" uid="uid://cth20fy7rkdwm" path="res://Fairyassests/lose/lose4.png" id="22_setj3"]
+[ext_resource type="Texture2D" uid="uid://g5whf2ip3u0f" path="res://Fairyassests/lose/lose1.png" id="23_froga"]
 [ext_resource type="Texture2D" uid="uid://bennnru707xxd" path="res://Fairyassests/walkingleft/walkingleft4.png" id="23_i8vg6"]
+[ext_resource type="Texture2D" uid="uid://bvmtkwku6uxo5" path="res://Fairyassests/lose/lose2.png" id="24_l5um8"]
 [ext_resource type="Texture2D" uid="uid://ci0flphcowdrr" path="res://Fairyassests/walkingleft/walkingleft5.png" id="24_q03jl"]
+[ext_resource type="Texture2D" uid="uid://pu33x3bwgrs4" path="res://Fairyassests/lose/lose6.png" id="25_qf8ao"]
 [ext_resource type="Texture2D" uid="uid://b7vetjg01f4pr" path="res://Fairyassests/walkingright/walkingright1.png" id="25_u8g3r"]
 [ext_resource type="Texture2D" uid="uid://dvpware7y8tai" path="res://Fairyassests/walkingright/walkingright2.png" id="26_yov37"]
 [ext_resource type="Texture2D" uid="uid://b4spspa88k0we" path="res://Fairyassests/walkingright/walkingright3.png" id="27_xws78"]
@@ -108,6 +114,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("20_1705j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_cdlh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_setj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_froga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_l5um8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_qf8ao")
+}],
+"loop": false,
+"name": &"lose",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("20_xma7b")
 }, {
 "duration": 1.0,
@@ -157,8 +186,7 @@ script = ExtResource("1_kjsqe")
 position = Vector2(299.547, 179)
 scale = Vector2(0.187943, 0.173828)
 sprite_frames = SubResource("SpriteFrames_m20kk")
-animation = &"walkingright"
-autoplay = "walkingleft"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(291, 160.625)
