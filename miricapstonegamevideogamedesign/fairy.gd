@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 # Constants for movement and gravity
 const SPEED = 300.0
-const JUMP_VELOCITY = -800.0
+const JUMP_VELOCITY = -900.0
 const GRAVITY = 1500.0  # Gravity constant
 
 # Health and points variables
